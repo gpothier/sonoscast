@@ -1,19 +1,18 @@
-# from http://freshfoo.com/blog/pulseaudio_monitoring
+# The PulseAudio monitoring part of this program (which is like 90% of it)
+# comes from http://freshfoo.com/blog/pulseaudio_monitoring
 
 
 import sys
 from Queue import Queue
 from ctypes import POINTER, c_ubyte, c_void_p, c_ulong, cast
 
-# The PulseAudio monitoring part of this program (which is like 90% of it)
-# comes from https://github.com/Valodim/python-pulseaudio
-
+# From https://github.com/Valodim/python-pulseaudio
 from pulseaudio.lib_pulseaudio import *
 
 import soco
 
 # edit to match your sink
-SINK_NAME = 'alsa_output.pci-0000_00_1b.0.analog-stereo'
+SINK_NAME = 'auto_null'
 METER_RATE = 10
 MAX_SAMPLE_VALUE = 127
 DISPLAY_SCALE = 2
